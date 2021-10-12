@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="back_ground">#ffffff</color>
+    <color name="equal_background_button">#3fe1ba</color>
+    <color name="grip_background">#9ca6aa</color>
+    <color name="function_text_color">#f365ee</color>
+    <color name="function_back_color">#35f365ee</color>
+    <color name="clear_text_color">#a2323a</color>
+    <color name="clear_back_color">#40a2323a</color>
+    <color name="theme_text">#bd6c06</color>
+    <color name="answer_text_color">#182b2f</color>
+    <color name="numpad_back">#f2f2f2</color>
+</resources>

@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_ground"
+    android:gravity="end"
+    android:orientation="vertical"
+    tools:context=".CalculatorActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/back_ground"
+        android:elevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:textColor="@color/answer_text_color"
+            android:text="Calculator"/>
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/mode"
+            android:layout_marginEnd="16dp"
+            android:layout_gravity="end"
+            android:src="@drawable/ic__02_moon"
+            app:tint="@color/answer_text_color" />
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/function_back_color"/>
+
+    <TextView
+        android:id="@+id/expression"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/grip_background"
+        android:textSize="24sp"
+        android:textStyle="italic|normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:text="5*12" />
+
+    <TextView
+        android:id="@+id/answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/answer_text_color"
+        android:textSize="48sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:text="45000" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/equals"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_above="@id/grip"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/calculator_back_ground"
+            android:fontFamily="sans-serif"
+            android:foreground="?attr/selectableItemBackground"
+            android:text="="
+            android:textColor="@color/answer_text_color"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/grip"
+            android:layout_width="24dp"
+            android:layout_height="8dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/grip_shape" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/equals"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="56dp"
+           android:layout_marginBottom="8dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/seven"
+                        android:layout_width="72dp"
+                        android:elevation="0.5dp"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_height="72dp"
+                        android:background="@drawable/numpad_button_background"
+                        android:fontFamily="sans-serif"
+                        android:text="7"
+                        android:textColor="@color/answer_text_color"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/eight"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:elevation="0.5dp"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:background="@drawable/numpad_button_background"
+                        android:fontFamily="sans-serif"
+                        android:text="8"
+                        android:textColor="@color/answer_text_color"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/nine"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:elevation="0.5dp"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        android:background="@drawable/numpad_button_background"
+                        android:fontFamily="sans-serif"
+                        android:text="9"
+                        android:textColor="@color/answer_text_color"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/devision"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:background="@drawable/function_pad"
+                        android:fontFamily="sans-serif"
+                        android:text="/"
+                        android:textColor="@color/function_text_color"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/four"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:elevation="0.5dp"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:background="@drawable/numpad_button_background"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:fontFamily="sans-serif"
+                        android:text="4"
+                        android:textColor="@color/answer_text_color"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/five"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:elevation="0.5dp"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:background="@drawable/numpad_button_background"
+                        android:fontFamily="sans-serif"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:text="5"
+                        android:textColor="@color/answer_text_color"
+                        android:textStyle="normal"
+                        android:textSize="20sp"
+                       />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/six"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:elevation="0.5dp"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:background="@drawable/numpad_button_background"
+                        android:fontFamily="sans-serif"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:text="6"
+                        android:textColor="@color/answer_text_color"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/multiply"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/function_pad"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:fontFamily="sans-serif"
+                        android:text="*"
+                        android:textColor="@color/function_text_color"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/one"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:elevation="0.5dp"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:background="@drawable/numpad_button_background"
+                        android:fontFamily="sans-serif"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:text="1"
+                        android:textColor="@color/answer_text_color"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/two"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:elevation="0.5dp"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:background="@drawable/numpad_button_background"
+                        android:fontFamily="sans-serif"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:text="2"
+                        android:textColor="@color/answer_text_color"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/three"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:elevation="0.5dp"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:background="@drawable/numpad_button_background"
+                        android:fontFamily="sans-serif"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:text="3"
+                        android:textColor="@color/answer_text_color"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/minus"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+
+                        android:foreground="?attr/selectableItemBackground"
+                        android:background="@drawable/function_pad"
+                        android:fontFamily="sans-serif"
+                        android:text="-"
+                        android:textColor="@color/function_text_color"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/zero"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:elevation="0.5dp"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:background="@drawable/numpad_button_background"
+                        android:fontFamily="sans-serif"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:text="0"
+                        android:textColor="@color/answer_text_color"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/clear"
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:background="@drawable/clear_pad"
+                        android:fontFamily="sans-serif"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:text="C"
+                        android:textColor="@color/clear_text_color"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/add"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:background="@drawable/function_pad"
+                        android:fontFamily="sans-serif"
+                        android:text="+"
+                        android:textColor="@color/function_text_color"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
